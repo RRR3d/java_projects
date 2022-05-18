@@ -12,13 +12,13 @@ public class Person {
     {
 
     }
-    public String getName()
-    {...}
-    public void setName(String theName)
-    {...}
-    public String toString()
-    {...}
-    public boolean equals(Object other)
-    {...}
+    //public String getName()
+
+    public void setName(String theName){}
+
+   // public String toString(){}
+
+    //public boolean equals(Object other)
+
 }
 
