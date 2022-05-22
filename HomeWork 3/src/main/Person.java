@@ -1,24 +1,34 @@
 package main;
 
-public class Person {
+class Person {
     private String name;
 
     public Person() {
     }
+
     public Person(String theName) {
-        this.name = theName;
+        name=theName;
     }
-    public Person(Person theObject)
-    {
+
+    public Person(Person theObject) {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String theName) {
+    }
+
+    public String toString() {
+        return name;
+    }
+
+    public boolean equals(Object other) {
+        Person n = (Person)other;
+        return n.getName().equals(getName());
 
     }
-    //public String getName()
-
-    public void setName(String theName){}
-
-   // public String toString(){}
-
-    //public boolean equals(Object other)
-
 }
+
 
