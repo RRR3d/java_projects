@@ -3,7 +3,7 @@ package main;
 public class Main {
 
     public static void main(String[] args) {
-	/*
+
         Administrator admin = new Administrator();
 
         Administrator admin1 = new Administrator();
@@ -18,7 +18,7 @@ public class Main {
         System.out.println("\nAdministrator 2:");
         System.out.println(admin2);
 
-*/
+
 
         Doctor d1 = new Doctor("d1","sp1");
         Doctor d2 = new Doctor("d2","sp2");
