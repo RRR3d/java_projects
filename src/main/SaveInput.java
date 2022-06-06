@@ -27,6 +27,8 @@ public class SaveInput {
             print.println(number);
             print.close();
 
+
+
             System.out.println("your Name  and number have been added to the Database, Thanks " + name );
 
         } catch (Exception e) {

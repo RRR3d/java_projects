@@ -6,23 +6,27 @@ import java.util.Scanner;
 
 public class Main {
 
-    abstract class AQuestion {
-        public int min(int a, int b) {
-            return (a<b)? a:b;
-        }
-        public abstract void hi();
+    public static void main(String[] args) {
+	//findOccurances10();
+
     }
-    class Question extends AQuestion {
-        public void hi() {
-            System.out.println("Hi");
+
+    public static int findOccurances10(String filename){
+        int count = 0;
+        try {
+            File  f  = new File(filename);
+            FileInputStream fis = new FileInputStream(f);
+            Scanner scan = new Scanner(fis);
+
+            while(scan.hasNext()) {
+                if (scan.next() == "10" )
+                    count++;
+                System.out.println(scan.next());
+            }
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
-        public int min(int a , int b){}
-        int hls
-        public int total (int a, int b) {
-            return min (a, b) +super.min(a,b);
-        }
-        public static void main(String[] args) {
-            AQuestion q= new AQuestion();
-            System.out.println(q.min(2,3));
-        }
-    }}
+        return  count;
+    }
+}
