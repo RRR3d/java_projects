@@ -1,10 +1,9 @@
 package main;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("fdafad");
+//Running the static method within.
+        //Q7.testClasses();
     }
-
-
 }
+

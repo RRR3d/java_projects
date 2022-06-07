@@ -11,32 +11,37 @@ import static java.lang.Math.sqrt;
 public class getData {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner inputFile = new Scanner(new File("/Users/abdo/Documents/GitHub/java_projects/HomeWork4/src/main/Q4.txt"));
+        // READ DATA FROM FILE
+        Scanner scannerFILE = new Scanner(new File("/Users/abdo/Documents/GitHub/java_projects/HomeWork4/src/main/Q4.txt"));
 
-        double sum = 0;
-        int n = 0;
 
-            while (inputFile.hasNext()) {
-                n++;
-                sum += inputFile.nextDouble();
+        int NUMBER = 0; // INT NUMBER
+        double aNUM = 0; // DOUBLE NUMBER
+            while (scannerFILE.hasNext()) { // WHILE LOOP
+                NUMBER++; // COUNT HTE NUMBER
+                aNUM += scannerFILE.nextDouble(); // ANUM + THE NUM
             }
-        inputFile.close();
-          // inputFile.close();
-            double avg = sum / n;
-        Scanner inputFile2  = new Scanner(new File("/Users/abdo/Documents/GitHub/java_projects/HomeWork4/src/main/Q4.txt"));
+        scannerFILE.close();
+          // scannerFILE.close();
+            double AVARAGE = aNUM / NUMBER;
+        Scanner scannerFILE2  = new Scanner(
+                new File("/Users/abdo/Documents/GitHub/java_projects/HomeWork4/src/main/Q4.txt"));
 
-        double r;
-            double num;
-            double sum2 = 0;
-            while (inputFile2.hasNext()) {
-                r = inputFile2.nextDouble();
-                sum2 += pow((r - avg), 2);
+
+
+            double RESULT_2 = 0;      // THE RESULT INITAILAIZAITON
+
+            double numX;     // THE NUM DOUBLE
+
+            while (scannerFILE2.hasNext()) {  // WHILE LOop
+                numX = scannerFILE2.nextDouble();
+                RESULT_2 += pow((numX - AVARAGE), 2);
             }
 
-            inputFile2.close();
-            double SD = sqrt(sum2 / (n - 1));
-        System.out.println("THIS IS SUM1 " +sum);
-        System.out.println("THIS IS SUM2 " + SD);
+            scannerFILE2.close();  // CLOSE THE SCANNER
+            double LASTRESULT = sqrt(RESULT_2 / (NUMBER - 1));  // CALCULATION
+        System.out.println("the first aNUM is " +aNUM + "the second aNUM is " + LASTRESULT);  // PRINT HTE CALCULATIUON
+
 
         }
 
