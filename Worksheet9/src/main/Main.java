@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -49,29 +50,26 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ArrayList<String> alist = new ArrayList<>();
-        alist.add("SOSO");
-        alist.add("KOKO");
-        alist.add("MOMO");
-        ArrayList<Integer> num1 = new ArrayList<Integer>();
-        num1.add(1);
-        num1.add(2);
-        num1.add(3);
-
-        ArrayList<Integer> num2 = new ArrayList<Integer>();
-        num2.add(1);
-        num2.add(2);
-        num2.add(3);
-
-
         Main m = new Main();
-        // METHOD 1
-        m.numberIT(alist);
-        // Method 2
-        m.addNumbers();
-        // Method 3
-        m.addArrays(num1 , num2);
-        // METHOD 4
-        m.Fruits(alist);
+        int[][] s = {{2,3} ,{3,4},{5,4}};
+        int[] k = {1,2,3};
+      //  System.out.println(Arrays.toString(m.arr(s,k)));
+
+        int p =3;
+        System.out.println("p" + p + p);
+    }
+
+    public int[][] arr(int[][] t , int[] m){
+        int [][] D = new int[t.length][t[0].length];
+        int j= 0;
+        for(int i = 0 ; i < t.length ; i++) {
+            D[i][j] = t[i][j] + m[i];
+            if (t.length == m.length){
+                j++;
+        }
+
+        }
+
+        return D;
     }
 }
