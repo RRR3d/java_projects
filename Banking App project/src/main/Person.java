@@ -1,6 +1,8 @@
 package main;
 
 public class Person {
+
+    // PERSON CLASS , I WILL ADD THE NEW USERS IN THIS CLASS
     private String Name;
     private double salary;
     private int ID;

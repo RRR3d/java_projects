@@ -10,10 +10,12 @@ import java.util.HashMap;
 
 
 public class LoginPage implements ActionListener , KeyListener {
+    // LOGIN PAGE IS TO CHECK  THE USER's DATA
     JFrame frame = new JFrame();
 
     ImageIcon banklogo1 = new ImageIcon(
             "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/Banking App project.png");
+
     JLabel lblIcone = new JLabel();
     JLabel lblBank = new JLabel("MIB");
 
@@ -68,7 +70,7 @@ public class LoginPage implements ActionListener , KeyListener {
                 "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/Banking App project.png")));
 
 
-        
+
         frame.add(lblIcone);
 
         frame.add(btnLogin);
@@ -106,6 +108,9 @@ public class LoginPage implements ActionListener , KeyListener {
 
         if(e.getSource() == btnLogin){
            checkLoginInfo();
+        }
+        if (e.getSource() == btnSignup){
+            new SignupPage();
         }
 
     }
