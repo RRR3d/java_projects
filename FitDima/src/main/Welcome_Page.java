@@ -86,6 +86,4 @@ public class Welcome_Page implements ActionListener {
         return 3.23;
     }
 
-    // This project has been done by Abdurrahman Nafi for a Kunafe
-    // thanks !!
 }

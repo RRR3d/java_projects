@@ -2,8 +2,10 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class WelcomePage  {
+public class WelcomePage  implements ActionListener {
 
     // CREATE THE WELLCOME PAGE
 
@@ -20,6 +22,8 @@ public class WelcomePage  {
     JLabel lblIban = new JLabel();
     JLabel lblBalance = new JLabel();
 
+    JButton btnLogout = new JButton("Logout");
+
     public double balance = 1029;
 
     /**
@@ -28,6 +32,10 @@ public class WelcomePage  {
      */
     // CONSTUCTOR FOR THE WELCOME PAGE
     WelcomePage(String userID){
+        btnLogout.setBounds(400 , 400  ,200 ,35);
+        frame.add(btnLogout);
+
+        btnLogout.addActionListener(this);
         lblBank.setFont(new Font("BANK" , Font.BOLD , 30));
         lblBank.setBounds(250,125 , 100 , 100);
         lblIcone.setIcon(banklogo1);
@@ -55,5 +63,10 @@ public class WelcomePage  {
         frame.setSize(600 , 600);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }

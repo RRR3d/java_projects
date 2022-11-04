@@ -14,7 +14,8 @@ public class Main  extends JFrame {
     public static void main(String[] args) {
         users_passwords usersPasswords = new users_passwords();
         LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
-      // new  SignupPage();
+//        users_passwords us = new users_passwords("fda" , "dfda");
+//        usersPasswords.LoginInfo.put("kill","koko");
 
 
 
