@@ -50,7 +50,10 @@ public class WelcomePage  implements ActionListener {
         lblWelcome.setFont(new Font( "font"  , Font.ITALIC , 25) );
         // Account Details
         lblBalance.setText("Available Balance is: " + balance + "TL");
-        lblIban.setText(" Your Iban: TR 3391 8319 4319 4931");
+
+        lblIban.setText(" Your Iban: TR " + (int) (Math.random() *10000 ) + " "
+                + (int) (Math.random() *10000 ) + " "+ (int) (Math.random() *10000 ) +
+                " "+ (int) (Math.random() *10000 ));
 
         lblBalance.setBounds(5 , 250 , 300 ,35);
         lblIban.setBounds(0,270 ,300 ,35);
@@ -68,5 +71,10 @@ public class WelcomePage  implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if(e.getSource() == btnLogout){
+            users_passwords usersPasswords = new users_passwords();
+            LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
+            JOptionPane.showMessageDialog(null , "You have succefully logged out ! ");
+        }
     }
 }
