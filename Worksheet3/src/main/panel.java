@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class panel extends JPanel  implements ActionListener {
+public class panel extends JPanel  implements ActionListener , Runnable {
     final int panel_W = 500 ;
     final int panel_H = 500;
     Timer timer;
@@ -32,6 +32,8 @@ public class panel extends JPanel  implements ActionListener {
     int x4 =400 ;
     int y4 = 400;
 
+int xAxis,yAxis , Radius ;
+Color color;
 
 
 
@@ -44,15 +46,18 @@ public class panel extends JPanel  implements ActionListener {
     /*
     The Constructor takes 4 threads for each circle  and the dimensions for the panel
      */
-    panel(Thread th1 , Thread th2 , Thread th3 , Thread th4){
+    panel(){
+        this.th = th;
+
+        this.x = xAxis;
+        this.y = yAxis;
+       // this.R = Radius;
+
         this.setPreferredSize(new Dimension(panel_W , panel_H));
         this.setBackground(Color.RED);
         timer = new Timer(10 , this);
         timer.start();
-        this.th1 =th1;
-        this.th2 = th2;
-        this.th3 = th3 ;
-        this.th4 = th4;
+
     }
 
     /*
@@ -77,32 +82,40 @@ public class panel extends JPanel  implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(th1.getName().equals( "th1")){
+
         if(x >= panel_W  - 100  ||   x < 0){
             xVelocity *= -1;}
-        x += xVelocity;}
+        x += xVelocity;
 
         // *****************************************
 
-        if(th2.getName().equals( "th2")){
+
             if(x2 >= panel_W  - 100  ||   x2 < 0){
                 x2Velocity *= -1;}
-            x2 += x2Velocity;}
+            x2 += x2Velocity;
         // *****************************************
 
-        if(th3.getName().equals( "th3")){
+
             if(y3 >= panel_H - 100  ||   y3 < 0){
                 y3Velocity *= -1; }
-            y3 +=  y3Velocity;}
+            y3 +=  y3Velocity;
         // *****************************************
 
-        if(th4.getName().equals( "th4")){
+
             if(y4 >= panel_H - 100  ||   y4 < 0){
                 y4Velocity *= -1;}
-            y4 +=  y4Velocity;}
+            y4 +=  y4Velocity;
         // *****************************************
 
         // Repaint to move the circles
         repaint();
+    }
+
+    Thread th;
+    @Override
+    public void run() {
+
+
+
     }
 }

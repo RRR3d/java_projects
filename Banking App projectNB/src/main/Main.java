@@ -12,14 +12,8 @@ public class Main  extends JFrame {
 
 // RUN CLASS
     public static void main(String[] args) {
-        //users_passwords usersPasswords = new users_passwords();
-        //LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
-      //  new SignUpNET();
-
-       LoadingPage p = new LoadingPage();
-        Thread thread = new Thread(p);
-        thread.start();
-
+        users_passwords usersPasswords = new users_passwords();
+        LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
 //        users_passwords us = new users_passwords("fda" , "dfda");
 //        usersPasswords.LoginInfo.put("kill","koko");
 

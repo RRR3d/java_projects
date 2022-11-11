@@ -124,10 +124,6 @@ class Main {
         int x = evaluateExpression(s);
         System.out.printf("%s = %d\n",s,x);
 
-
-        String[] sa = {"*****************"};
-        Arrays.stream(sa).spliterator("*");
-        System.out.println(sa.length);
         
 
 
