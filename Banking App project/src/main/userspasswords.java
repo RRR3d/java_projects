@@ -2,13 +2,13 @@ package main;
 
 import java.util.HashMap;
 
-public class users_passwords  {
+public class userspasswords  {
 
     // CREATE A HASHMAP FOR THE USERNAME AND PASSWORD SYSTEM
     HashMap<String,String> LoginInfo = new HashMap<String , String >();
 
 
-    public users_passwords(){
+    public userspasswords(){
 
         LoginInfo.put("admin" , "admin");
         LoginInfo.put("BroCode" , "BRO123");

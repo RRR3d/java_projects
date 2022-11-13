@@ -78,6 +78,7 @@ public class SignupPage  implements ActionListener {
         frame.add(txtTC);
         frame.add(btnSignUp);
 
+        frame.setBackground(Color.GRAY);
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -92,9 +93,9 @@ public class SignupPage  implements ActionListener {
         if (e.getSource() == btnSignUp){
             String NewUserName = txtUserName.getText();
             String NewPassword = txtPassword.getText();
-            users_passwords add = new users_passwords();
+            userspasswords add = new userspasswords();
             add.add_user(NewUserName , NewPassword);
-            users_passwords usersPasswords = new users_passwords();
+            userspasswords usersPasswords = new userspasswords();
             LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
         }
     }

@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class BILIG {
     public static void main(String[] args) {
+        /*
         BILIG b = new BILIG();
         int ID = b.getID().length();
         if( ID == 10){
@@ -58,4 +59,6 @@ public class BILIG {
         return inputFuc;
     }
 
-}
+         */
+
+}}

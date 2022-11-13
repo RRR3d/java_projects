@@ -72,7 +72,7 @@ public class WelcomePage  implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if(e.getSource() == btnLogout){
-            users_passwords usersPasswords = new users_passwords();
+            userspasswords usersPasswords = new userspasswords();
             LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
             JOptionPane.showMessageDialog(null , "You have succefully logged out ! ");
         }

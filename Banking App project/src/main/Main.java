@@ -12,13 +12,32 @@ public class Main  extends JFrame {
 
 // RUN CLASS
     public static void main(String[] args) {
-        //users_passwords usersPasswords = new users_passwords();
-        //LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
-      //  new SignUpNET();
+        new Loading();
+        for(int i = 0 ; i < 20 ; i++){
+            try{
+                Thread.sleep(100);
+                if(i == 19){
+                    userspasswords usersPasswords = new userspasswords();
+                    LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
+                    // System.exit(1);
 
-       LoadingPage p = new LoadingPage();
-        Thread thread = new Thread(p);
-        thread.start();
+                }
+            }catch(Exception e){
+                System.out.println(e);
+            }
+        }
+
+
+
+      // LoadingPage p = new LoadingPage();
+        //Thread thread = new Thread(p);
+        //thread.start();
+
+
+
+
+
+
 
 //        users_passwords us = new users_passwords("fda" , "dfda");
 //        usersPasswords.LoginInfo.put("kill","koko");

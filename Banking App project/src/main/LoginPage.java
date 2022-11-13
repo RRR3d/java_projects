@@ -47,6 +47,7 @@ public class LoginPage implements ActionListener , KeyListener {
         lblIcone.setIcon(banklogo1);
         lblIcone.setBounds(225 , 50 , 150 , 100);
 
+        frame.setBackground(Color.GRAY);
 
         lblUser.setBounds(125 ,200 ,75 ,25);
         lblPassword.setBounds(125 ,250 ,75 ,25);
@@ -104,12 +105,15 @@ public class LoginPage implements ActionListener , KeyListener {
         if(e.getSource() == btnReset){
             txtuser.setText("");
             txtPassword.setText("");
+
         }
 
         if(e.getSource() == btnLogin){
            checkLoginInfo();
+
         }
         if (e.getSource() == btnSignup){
+
             new SignupPage();
         }
 
@@ -143,6 +147,7 @@ public class LoginPage implements ActionListener , KeyListener {
                 lblMessage.setForeground(Color.green);
                 lblMessage.setText("WELCOME: " + userID);
                 frame.dispose();
+
                 WelcomePage welcomePage = new WelcomePage(userID);
             }
             else{
