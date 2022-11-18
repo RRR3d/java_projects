@@ -13,12 +13,17 @@ public class Main  extends JFrame {
 // RUN CLASS
     public static void main(String[] args) {
         new Loading();
+        //  new WelcomePage("USER");
+
+        userspasswords usersPasswords = new userspasswords();
+        LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
+
+        /*
         for(int i = 0 ; i < 20 ; i++){
             try{
                 Thread.sleep(100);
                 if(i == 19){
-                    userspasswords usersPasswords = new userspasswords();
-                    LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
+
                     // System.exit(1);
 
                 }
@@ -26,7 +31,7 @@ public class Main  extends JFrame {
                 System.out.println(e);
             }
         }
-
+*/
 
 
       // LoadingPage p = new LoadingPage();

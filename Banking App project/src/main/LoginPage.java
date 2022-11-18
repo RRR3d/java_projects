@@ -9,12 +9,16 @@ import java.awt.event.KeyListener;
 import java.util.HashMap;
 
 
-public class LoginPage implements ActionListener , KeyListener {
+public class LoginPage extends JPanel implements ActionListener , KeyListener {
     // LOGIN PAGE IS TO CHECK  THE USER's DATA
-    JFrame frame = new JFrame();
+    JFrame  frame= new JFrame();
 
     ImageIcon banklogo1 = new ImageIcon(
-            "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/Banking App project.png");
+            "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/HSBC_NEWLOGO(2).jpg");
+
+    JLabel lblBgImage = new JLabel();
+    ImageIcon BgImage =new ImageIcon(
+            "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/RedLION_wallpaper(2).jpg");
 
     JLabel lblIcone = new JLabel();
     JLabel lblBank = new JLabel("MIB");
@@ -28,38 +32,44 @@ public class LoginPage implements ActionListener , KeyListener {
     JLabel lblPassword = new JLabel("password");
     JLabel lblMessage = new JLabel();
 
-
     HashMap<String , String > loginInfo = new HashMap<String , String>();
 
     /**
-     *
+     * LOGIN PAGE CONSTRUCTOR  need HASHMAP to be able to get users and passwrods  and check them
      * @param loginInfo_Org
      */
     public  LoginPage(HashMap< String , String > loginInfo_Org){
         // CREATING THE FRAME AND SETTING ITS SETTINGS
         loginInfo = loginInfo_Org;
 
+
         // SET THE NAME OF THE BANK
         lblBank.setFont(new Font("BANK" , Font.BOLD , 30));
-        lblBank.setBounds(250,125 , 100 , 100);
-        frame.add(lblBank);
+        lblBank.setBounds(825,225 , 100 , 100);
+        //add(lblBank);
         // SET THE BANK LOGO
         lblIcone.setIcon(banklogo1);
-        lblIcone.setBounds(225 , 50 , 150 , 100);
+        lblIcone.setBounds(900 , 200 , 300 , 200);
+        lblBgImage.setBounds(0,-200,1400 ,1000);
+        lblBgImage.setIcon(BgImage);
 
-        frame.setBackground(Color.GRAY);
+        //setBackground(Color.GRAY);
 
-        lblUser.setBounds(125 ,200 ,75 ,25);
-        lblPassword.setBounds(125 ,250 ,75 ,25);
-        lblMessage.setBounds(150,250,250 , 200);
+        lblUser.setBounds(825 ,400 ,75 ,25);
+        lblPassword.setBounds(825 ,450 ,75 ,25);
+        lblMessage.setBounds(850,450,250 , 200);
         lblMessage.setFont(new Font("font" , Font.ITALIC , 20));
 
-        txtuser.setBounds(200, 200 , 200 ,25);
-        txtPassword.setBounds(200, 250 , 200 ,25);
+        lblUser.setForeground(Color.white);
+        lblPassword.setForeground(Color.white);
 
-        btnLogin.setBounds(125, 300 , 100 , 25);
-        btnReset.setBounds(225, 300 , 100 ,25  );
-        btnSignup.setBounds(325, 300 , 100 ,25  );
+
+        txtuser.setBounds(900, 400 , 200 ,25);
+        txtPassword.setBounds(900, 450 , 200 ,25);
+
+        btnLogin.setBounds(825, 500 , 100 , 25);
+        btnReset.setBounds(925, 500 , 100 ,25  );
+        btnSignup.setBounds(1025, 500 , 100 ,25  );
         btnSignup.addActionListener(this);
         btnLogin.addActionListener(this);
         btnReset.addActionListener(this);
@@ -67,44 +77,52 @@ public class LoginPage implements ActionListener , KeyListener {
         txtPassword.addKeyListener(this);
 
         // ADD THE DATA TO THE FRAME
-        frame.add(new JLabel(new ImageIcon(
-                "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/Banking App project.png")));
-
-
-
-        frame.add(lblIcone);
-
-        frame.add(btnLogin);
-        frame.add(btnReset);
-        frame.add(btnSignup);
-        frame.add(txtuser);
-        frame.add(txtPassword);
-        frame.add(lblMessage);
-        frame.add(lblUser);
-        frame.add(lblPassword);
-
+        add(new JLabel(new ImageIcon(
+                "Banking App project.png")));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(600 , 600);
+        frame.setSize(1400 , 1000);
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.add(this);
+        setLayout(null);
+        //setBackground(Color.GRAY);  //************************************ BG COLOR *****+*************
+        setVisible(true);
+        setSize(frame.getSize());
+
+
+        add(lblIcone);
+
+
+        add(btnLogin);
+        add(btnReset);
+        add(btnSignup);
+        add(txtuser);
+        add(txtPassword);
+        add(lblMessage);
+        add(lblUser);
+        add(lblPassword);
 
 
 
 
+
+
+
+
+        add(lblBgImage);
     }
 
     /**
-     *
+     * CREATING THE ACTIONLISTNER TO CONNECT THE BUTTONS WITH THE LABELS
      * @param e
      */
-
-    // CREATING THE ACTIONLISTNER TO CONNECT THE BUTTONS WITH THE LABELS
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if(e.getSource() == btnReset){
             txtuser.setText("");
             txtPassword.setText("");
+            new Loading();
 
         }
 
@@ -136,7 +154,9 @@ public class LoginPage implements ActionListener , KeyListener {
 
     }
 
-    // METHOD TO CHECK IF THE USER AND PASSWORD ARE CORRECT OR NOT!
+    /**
+     * METHOD TO CHECK IF THE USER AND PASSWORD ARE CORRECT OR NOT!
+     */
     public void checkLoginInfo(){
         String userID =  txtuser.getText();
         String userPassword = String.valueOf(txtPassword.getText());

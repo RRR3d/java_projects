@@ -8,6 +8,9 @@ public class userspasswords  {
     HashMap<String,String> LoginInfo = new HashMap<String , String >();
 
 
+    /**
+     * SAVE passwordds and usernames
+     */
     public userspasswords(){
 
         LoginInfo.put("admin" , "admin");
@@ -16,10 +19,22 @@ public class userspasswords  {
         LoginInfo.put("Gym" , "Gym");
 
     }
+
+    /**
+     * add usernames and passwords
+     * @param User
+     * @param Password
+     */
     public void add_user(String User , String Password){
         LoginInfo.put(User, Password);
 
     }
+
+    /**
+     * add anew account
+     * @param NewUserName
+     * @param NewPassword
+     */
     public void addAccount(String NewUserName , String NewPassword){
          LoginInfo.put(NewUserName , NewPassword);
     }

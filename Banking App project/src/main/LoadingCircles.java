@@ -6,6 +6,14 @@ public class LoadingCircles {
     int x , y , xS ,yS ;
     Color color;
 
+    /**
+     * ADd x y and other parramerters needed to the constracor needed for the app to start
+     * @param x
+     * @param y
+     * @param xS
+     * @param yS
+     * @param color
+     */
     public LoadingCircles(int x , int y, int xS , int yS , Color color){
         this.x = x ;
         this.y = y;
@@ -14,7 +22,10 @@ public class LoadingCircles {
         this.color = color;
     }
 
-
+    /**
+     * SETTERS AND GETTERS
+     * @return
+     */
     public int getX() {
         return x;
     }
