@@ -8,11 +8,9 @@ public class Loading extends JPanel implements Runnable {
     int speedx =5;  //intial speed for the project
    //Timer timer = new Timer(200,this);
     JLabel lblLoading;
-
     ImageIcon banklogo1 = new ImageIcon(
             "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/HSBC_NEWLOGO(2).jpg");
     JLabel lblIcone = new JLabel();
-
     JLabel lblBank = new JLabel("MIB");
     JLabel lblBgImage = new JLabel();
     ImageIcon BgImage =new ImageIcon(
@@ -39,15 +37,11 @@ public class Loading extends JPanel implements Runnable {
     int xSB = 12;
     int xSC = 15;
     int xH, xS,xB,xC , Y;
-
-
     /**
      * Let the circles move and control their movement
      */
     public void Move(){
         // x = x + speedx;
-
-
         /*
         if(x >= panel_W  - 100  ||   x < 0){
             xVelocity *= -1;}
