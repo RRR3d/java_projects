@@ -12,11 +12,15 @@ public class Main  extends JFrame {
 
 // RUN CLASS
     public static void main(String[] args) {
-        new Loading();
+
         //  new WelcomePage("USER");
+        new Loading();
 
         userspasswords usersPasswords = new userspasswords();
         LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
+        Thread th1 = new Thread(loginPage);
+        th1.start();
+
 
         /*
         for(int i = 0 ; i < 20 ; i++){

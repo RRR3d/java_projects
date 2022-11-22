@@ -9,7 +9,7 @@ import java.awt.event.KeyListener;
 import java.util.HashMap;
 
 
-public class LoginPage extends JPanel implements ActionListener , KeyListener {
+public class LoginPage extends JPanel implements ActionListener , KeyListener , Runnable {
     // LOGIN PAGE IS TO CHECK  THE USER's DATA
     JFrame  frame= new JFrame();
 
@@ -122,7 +122,9 @@ public class LoginPage extends JPanel implements ActionListener , KeyListener {
         if(e.getSource() == btnReset){
             txtuser.setText("");
             txtPassword.setText("");
-            new Loading();
+
+            Thread th1 = new Thread(new Loading());
+            th1.start();
 
         }
 
@@ -177,5 +179,12 @@ public class LoginPage extends JPanel implements ActionListener , KeyListener {
         else{
             lblMessage.setForeground(Color.red);
             lblMessage.setText("Username not found!");}
+    }
+
+    @Override
+    public void run() {
+        try{
+
+        }catch (Exception e ){}
     }
 }

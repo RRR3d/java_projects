@@ -18,6 +18,9 @@ public class WelcomePage extends JPanel  implements ActionListener {
     JLabel lblIcone = new JLabel();
     JLabel lblBank = new JLabel("MIB");
     JLabel lblCard = new JLabel();
+    JButton btnTransfer = new JButton("Transfer  Money");
+    JButton btnSettings = new JButton("Manage Settings");
+
 
 
 
@@ -34,18 +37,29 @@ public class WelcomePage extends JPanel  implements ActionListener {
     ImageIcon BgImage =new ImageIcon(
             "/Users/abdo/Documents/GitHub/java_projects/Banking App project/src/main/RedLION_wallpaper(2).jpg");
 
+    JMenuBar MenuBar = new JMenuBar();
 
     JLabel lblYourCard = new JLabel();
     public double balance = 1029;
 
+    public static void main(String[] args) {
+        new WelcomePage("Stinrg");
+    }
     /**
      *Constructor and wellcome page
      * @param userID
      */
     // CONSTUCTOR FOR THE WELCOME PAGE
     WelcomePage(String userID){
-        btnLogout.setBounds(1050 , 700  ,200 ,35);
+        add(MenuBar);
+        btnLogout.setBounds(20 , 700  ,200 ,35);
+        btnTransfer.setBounds(20 , 600  ,200 ,35);
+        btnSettings.setBounds(20 , 500 ,200 ,35);
+        add(btnTransfer);
+        add(btnSettings);
         add(btnLogout);
+
+
 
         lblBgImage.setBounds(0,-200,1400 ,1000);
         lblBgImage.setIcon(BgImage);
