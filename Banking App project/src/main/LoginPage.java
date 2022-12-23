@@ -88,11 +88,7 @@ public class LoginPage extends JPanel implements ActionListener , KeyListener , 
         //setBackground(Color.GRAY);  //************************************ BG COLOR *****+*************
         setVisible(true);
         setSize(frame.getSize());
-
-
         add(lblIcone);
-
-
         add(btnLogin);
         add(btnReset);
         add(btnSignup);
@@ -101,14 +97,6 @@ public class LoginPage extends JPanel implements ActionListener , KeyListener , 
         add(lblMessage);
         add(lblUser);
         add(lblPassword);
-
-
-
-
-
-
-
-
         add(lblBgImage);
     }
 

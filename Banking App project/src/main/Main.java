@@ -13,6 +13,8 @@ public class Main  extends JFrame {
 // RUN CLASS
     public static void main(String[] args) {
 
+        //Server server = new Server();
+
         //  new WelcomePage("USER");
         new Loading();
 
@@ -20,6 +22,11 @@ public class Main  extends JFrame {
         LoginPage loginPage = new LoginPage(usersPasswords.getLoginInfo());
         Thread th1 = new Thread(loginPage);
         th1.start();
+
+
+        System.out.println(
+                Thread.activeCount()
+        );
 
 
         /*
