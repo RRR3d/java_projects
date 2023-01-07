@@ -25,24 +25,11 @@ public class InstagramUnfollowScript {
     private static final int LONG_DELAY_FREQ = 10;                  // How often to add additional delay time
     private static final long LONG_DELAY_ADDED_TIME = 60000L;      // Additional delay time
     private  Scanner scanner = new Scanner(System.in);
-    public void CreateNewLogins() throws Exception{
+    public void CreateNewLogins(){
         System.out.println("Please enter your username: ");
         String Username1 = scanner.nextLine().strip();
         System.out.println("Please enter your password: ");
-        String password1 = scanner.nextLine().strip();
-        Instagram4j instagram2 = Instagram4j.builder().username(Username1).password(password1).build();
-        instagram2.setup();
-
-        try{
-            instagram2.login();
-        }catch(Exception e ){
-            System.out.println(e + "THIS IS 2nd account ");
-        }
-
-        String Reproted_Account  = scanner.nextLine().strip();
-
-
-
+        String password1 = scanner.nextLine()
     }
     public static void main(String[] args) throws InterruptedException, IOException {
         Instagram4j instagram = Instagram4j.builder()

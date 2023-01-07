@@ -17,7 +17,7 @@ public class InstagramApiExample {
     public static void main(String[] args) throws IOException {
         // Authenticate with Instagram
         String username = "worldcupflagss";
-        Instagram4j instagram = Instagram4j.builder().username(username).password("Allahakbr0").build();
+        Instagram4j instagram = Instagram4j.builder().username(username).password("").build();
         instagram.setup();
         instagram.login();
 

@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 public class InstagramUnfollowScript {
     private static final String USERNAME = "worldcupflagss";                       // Your username
-    private static final String PASSWORD = "Allahakbr0";                       // Your password
+    private static final String PASSWORD = "kok";                       // Your password
     private static final long DELAY_TIME_MIN = 1000L;               // Minimal delay time between requests
     private static final long DELAY_TIME_MAX = 20000L;              // Maximal delay time between requests
     private static final int LONG_DELAY_FREQ = 10;                  // How often to add additional delay time
@@ -40,6 +40,8 @@ public class InstagramUnfollowScript {
         }
 
         String Reproted_Account  = scanner.nextLine().strip();
+
+        instagram2.
 
 
 
