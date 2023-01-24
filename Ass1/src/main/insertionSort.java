@@ -17,6 +17,8 @@ public class insertionSort {
         System.out.println("\nAfter:");
         System.out.println((Arrays.toString(numbers)));
     }
+
+
     public void insertSort(int[] inputArr){
         for(int i =1; i <inputArr.length ; i++){
             int j = i-1;
